@@ -10,7 +10,7 @@ N/A
 
 Role Variables
 --------------
-* duplicati\_success\_endpoint
+* duplicati\_success\_home\_assistant\_endpoint
 
 Role Defaults
 -------------
