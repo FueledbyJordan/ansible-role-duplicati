@@ -1,7 +1,7 @@
-ansible-role-home-assistant
+ansible-role-duplicati
 ======================
 
-This role configures home assistant for my homelab.
+This role configures duplicati for my homelab.
 
 Requirements
 ------------
@@ -31,7 +31,7 @@ Example Playbook
 ```
 - hosts: servers
   roles:
-    - ansible-role-home-assistant
+    - ansible-role-duplicati
 ```
 
 License
