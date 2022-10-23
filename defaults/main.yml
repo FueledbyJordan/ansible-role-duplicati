@@ -1,0 +1,4 @@
+---
+duplicati_conf_dir: '/opt/appdata/duplicati'
+duplicati_user: 'duplicati'
+duplicati_group: 'duplicati'

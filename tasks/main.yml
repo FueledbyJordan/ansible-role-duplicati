@@ -1,0 +1,26 @@
+---
+# tasks file for ansible-role-duplicati
+
+- name: Place configuration dir
+  ansible.builtin.file:
+    state: directory
+    path:  "{{ duplicati_conf_dir }}"
+    owner: "{{ duplicati_user }}"
+    group: "{{ duplicati_group }}"
+    mode: '0755'
+
+- name: Place run after script
+  ansible.builtin.file:
+    state: directory
+    path:  "{{ duplicati_conf_dir }}/scripts"
+    owner: "{{ duplicati_user }}"
+    group: "{{ duplicati_group }}"
+    mode: '0755'
+
+- name: Place home-assistant run-script-after
+  ansible.builtin.template:
+    src: templates/home-assistant-run-script-after.sh.j2
+    dest: "{{ duplicati_conf_dir }}/templates/home-assistant-run-script-after.sh"
+    owner: "{{ duplicati_user }}"
+    group: "{{ duplicati_group }}"
+    mode: '0755'

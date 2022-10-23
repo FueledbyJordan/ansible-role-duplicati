@@ -1,0 +1,5 @@
+#!/bin/bash
+
+backup_result=$(cat "$DUPLICATI__RESULTFILE" | grep 'ParsedResult' | awk '{ print $2 }')
+
+[[ "$backup_result" == "Success" ]] && curl -fsS -m 10 --retry 5 -o /dev/null {{ duplicati_success_endpoint }}
