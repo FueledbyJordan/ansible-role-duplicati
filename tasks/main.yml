@@ -9,7 +9,7 @@
     group: "{{ duplicati_group }}"
     mode: '0755'
 
-    - name: Place run after script dir
+- name: Place run after script dir
   ansible.builtin.file:
     state: directory
     path:  "{{ duplicati_conf_dir }}/scripts"
